@@ -25,10 +25,10 @@ public class ProductController {
         return productService.saveProduct(product);
     }
 
-//    @PutMapping("/{id}")
-//    public TodoDTO updateUser(@RequestBody TodoDTO user, @PathVariable("id") String id) {
-//        return userService.updateUser(id, user);
-//    }
+    @PutMapping("/{id}")
+    public Products updateProduct(@RequestBody Products product, @PathVariable("id") String id) {
+        return productService.updateProduct(id, product);
+    }
 
     @DeleteMapping("/{id}")
     public String deleteProduct(@PathVariable("id") String id) {

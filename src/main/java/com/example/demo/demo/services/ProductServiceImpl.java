@@ -26,19 +26,19 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.findAll();
     }
 
-//    @Override
-//    public Products updateUser(String id, Products product) {
-//        Optional<Products> findById = productRepository.findById(Long.valueOf(String.valueOf(id)));
-//        if (findById.isPresent()) {
-//            Products productEntity = findById.get();
-//            if (product.getName() != null && !product.getName().isEmpty())
-//                productEntity.getName(product.getName());
-//            if (product.getDescription() != null)
-//                productEntity.setDescription(product.getDescription());
-//            return productRepository.save(productEntity);
-//        }
-//        return null;
-//    }
+    @Override
+    public Products updateProduct(String id, Products product) {
+        Optional<Products> findById = productRepository.findById(Long.valueOf(String.valueOf(id)));
+        if (findById.isPresent()) {
+            Products productEntity = findById.get();
+            if (product.getName() != null && !product.getName().isEmpty())
+                productEntity.setName(product.getName());
+            if (product.getDescription() != null)
+                productEntity.setDescription(product.getDescription());
+            return productRepository.save(productEntity);
+        }
+        return null;
+    }
 
     @Override
     public void deleteProduct(String id) {

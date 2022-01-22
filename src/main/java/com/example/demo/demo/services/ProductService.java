@@ -7,6 +7,6 @@ import java.util.List;
 public interface ProductService {
     public Products saveProduct(Products product);
     public List<Products> getProducts();
-//    public Products updateProduct(String id, Products product);
+    public Products updateProduct(String id, Products product);
     public void deleteProduct(String id);
 }
