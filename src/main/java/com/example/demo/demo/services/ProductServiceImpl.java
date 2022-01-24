@@ -35,6 +35,11 @@ public class ProductServiceImpl implements ProductService {
                 productEntity.setName(product.getName());
             if (product.getDescription() != null)
                 productEntity.setDescription(product.getDescription());
+            if (product.getPrice() != null)
+                productEntity.setPrice(product.getPrice());
+            if (product.getQuantity() != null)
+                productEntity.setQuantity(product.getQuantity());
+
             return productRepository.save(productEntity);
         }
         return null;

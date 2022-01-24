@@ -20,10 +20,10 @@ public class Products {
     private String description;
 
     @Column
-    private double price;
+    private Double price;
 
     @Column
-    private int quantity;
+    private Integer quantity;
 
     public long getId() {
         return id;
@@ -37,11 +37,11 @@ public class Products {
         return description;
     }
 
-    public double getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public int getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
@@ -68,7 +68,7 @@ public class Products {
     protected Products() {
     }
 
-    public Products(String name, String description, double price, int quantity) {
+    public Products(String name, String description, Double price, Integer quantity) {
         this.name = name;
         this.description = description;
         this.price = price;
